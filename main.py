@@ -1,7 +1,7 @@
 import streamlit as st
-import keras
-from keras.applications.mobilenet_v2 import MobileNetV2
-from keras.layers import Flatten, Dense
+import tensorflow.keras as keras
+from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
+from tensorflow.keras.layers import Flatten, Dense
 import numpy as np
 from PIL import Image, ImageOps
 import cv2
