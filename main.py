@@ -50,9 +50,10 @@ def import_and_predict(image_data, model):
 if file is None:
     st.text("No image file has been uploaded.")
 else:
-    image = Image.open(file)
-    predictions = import_and_predict(image, model)
-    class_names = ["MildDemented", "ModerateDemented", "NonDemented", "VeryMildDemented"]
-    string = "The patient is predicted to be: " + class_names[np.argmax(predictions)]
-    st.success(string)
-    st.image(image)
+    st.text("did work")
+    # image = Image.open(file)
+    # predictions = import_and_predict(image, model)
+    # class_names = ["MildDemented", "ModerateDemented", "NonDemented", "VeryMildDemented"]
+    # string = "The patient is predicted to be: " + class_names[np.argmax(predictions)]
+    # st.success(string)
+    # st.image(image)
