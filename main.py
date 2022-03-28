@@ -27,7 +27,6 @@ def load_model():
     model.add(Dense(32, activation='relu', kernel_initializer='he_uniform'))
     model.add(Dense(4, activation='softmax'))
     model.summary()
-
     model.load_weights(r"MobileNetV2_weights.h5")
 
     return model
