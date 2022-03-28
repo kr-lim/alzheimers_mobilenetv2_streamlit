@@ -27,7 +27,7 @@ def load_model():
     model.add(Dense(32, activation='relu', kernel_initializer='he_uniform'))
     model.add(Dense(4, activation='softmax'))
     model.summary()
-    model.load_weights(r"MobileNetV2_weights.h5")
+    #model.load_weights(r"MobileNetV2_weights.h5")
 
     return model
 
@@ -50,10 +50,9 @@ def import_and_predict(image_data, model):
 if file is None:
     st.text("No image file has been uploaded.")
 else:
-    st.text("did work")
-    # image = Image.open(file)
-    # predictions = import_and_predict(image, model)
-    # class_names = ["MildDemented", "ModerateDemented", "NonDemented", "VeryMildDemented"]
-    # string = "The patient is predicted to be: " + class_names[np.argmax(predictions)]
-    # st.success(string)
-    # st.image(image)
+    image = Image.open(file)
+    predictions = import_and_predict(image, model)
+    class_names = ["MildDemented", "ModerateDemented", "NonDemented", "VeryMildDemented"]
+    string = "The patient is predicted to be: " + class_names[np.argmax(predictions)]
+    st.success(string)
+    st.image(image)
